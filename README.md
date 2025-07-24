@@ -36,7 +36,7 @@ Nutrimate is an AI-powered web application that recommends recipes based on ingr
 
 | Layer         | Technology                             |
 |---------------|-----------------------------------------|
-| Frontend      | Next.js, React, Tailwind CSS, SWR       |
+| Frontend      | Next.js, Tailwind CSS, SWR       |
 | Backend       | Flask (Python), REST API                |
 | AI Services   | OpenAI GPT-3.5, Gemini Vision API        |
 | Authentication| Appwrite (JWT, OAuth)                   |
@@ -65,14 +65,4 @@ The project follows a modular microservices architecture:
 | `/api/extract-recipe-attributes` | Recipe parsing with GPT-3.5               |
 | `/api/user/history`            | Fetch or update search history              |
 | `/api/user/preferences`        | Manage dietary filters and preferences      |
-
----
-
-## ⚙️ Installation & Setup
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/yourusername/nutrimate.git
-cd nutrimate
 
