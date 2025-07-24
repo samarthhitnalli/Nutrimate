@@ -1,64 +1,78 @@
-![logo](https://github.com/user-attachments/assets/34190e4e-4fc1-486b-aadd-a2a95e346178)
+![logo](public/logo.png)
 
-RecipeRover is an intuitive platform designed for recipe management and discovery, built as part of a Final year Project. This repository houses the production-ready codebase for the project.
+# 🥗 Nutrimate – Intelligent Recipe Recommendation System
 
-# 🌟 Features
-Recipe Discovery: Find recipes based on your preferences and available ingredients.
-* User-Friendly Interface: Intuitive and responsive design.
-* Customizable Search Filters: Search recipes by ingredients, preparation time, or cuisine type.
-* Ingredient Management: Easily manage and add your ingredient inventory.
+Nutrimate is an AI-powered web application that recommends recipes based on ingredients, nutritional preferences, and user input. It leverages advanced machine learning techniques, GPT-3.5, Gemini Vision, and a modular architecture to deliver fast, accurate, and personalized recipe recommendations.
 
-# 🚀 Technologies Used
-* Frontend: Next.js (with Tailwind CSS)
-* Backend: Python
-* Database: MongoDB
-* Deployment: Vercel for frontend and Hugging Face for backend
-* Others: TypeScript, React.js
+---
 
-# 📂 Project Structure
-* backend/&nbsp;&nbsp;&nbsp;&nbsp;        # Backend API and server logic 
-* components/ui/&nbsp;&nbsp;&nbsp;        # UI components for the frontend
-* public/&nbsp;&nbsp;&nbsp;        # Static assets
-* src/&nbsp;&nbsp;&nbsp;        # Application source files
-* .eslintrc.json&nbsp;&nbsp;&nbsp;        # ESLint configuration 
-* tailwind.config.ts&nbsp;&nbsp;&nbsp;        # Tailwind CSS configuration 
-* package.json&nbsp;&nbsp;&nbsp;        # Node.js dependencies
+## 🚀 Features
 
-# ⬇️ Installation Steps
-### 1. Clone the repository:
-* git clone https://github.com/GURSV/RecipeRover-Production.git
-* cd RecipeRover-Production
+- 🔍 **Multi-Input Search**
+  - Text-based search
+  - Image-based ingredient recognition (Gemini Vision)
+  - Nutrient-based filtering and diet customization
 
-### 2. Install frontend dependencies:
-* cd src
-* npm install
+- 🧠 **AI-Powered Intelligence**
+  - Recipe parsing with OpenAI GPT-3.5
+  - Ingredient detection from images using Gemini Vision API
+  - Hybrid ML model (TF-IDF + FastText + CNN + SHAP)
 
-### 3. Configure the backend:
-* cd backend
-* pip install -r requirements.txt
+- 📊 **Nutritional Insights**
+  - Custom dietary filters (vegan, keto, etc.)
+  - Macronutrient and calorie tracking
 
-### 4. Run the backend server:
-* uvicorn main:app --reload
+- 🧾 **User Search History**
+  - Personalized experience with search logs
+  - Managed securely using Appwrite Authentication
 
-### 5. Start the frontend:
-* cd src
-* npm run dev
+- 📱 **Modern Frontend**
+  - Built with Next.js and Tailwind CSS
+  - Mobile responsive and accessible UI
 
-### 6. Open your browser and navigate to:
-* http://localhost:3000
+---
 
-# 🌐 Deployment
-### 1. Frontend:
-* Deployed using Vercel.
-* Update the vercel.json configuration file as needed.
+## 🛠️ Tech Stack
 
-### 2. Backend:
-* Log in to your Hugging Face account.
-* Create a new Space for your backend.
-* Upload your backend files to the Space, or connect it to this GitHub repository.
+| Layer         | Technology                             |
+|---------------|-----------------------------------------|
+| Frontend      | Next.js, React, Tailwind CSS, SWR       |
+| Backend       | Flask (Python), REST API                |
+| AI Services   | OpenAI GPT-3.5, Gemini Vision API        |
+| Authentication| Appwrite (JWT, OAuth)                   |
+| Database      | MongoDB Atlas                           |
+| Deployment    | Vercel (Frontend), Hugging Face Spaces (Backend) |
 
-# 🧑‍💻 Contributors
-* GURSV (https://github.com/GURSV)
-* Garvit-Nag (https://github.com/Garvit-Nag)
+---
 
-⭐ Thanks, Have a great day ⭐
+## 🧱 Architecture Overview
+
+The project follows a modular microservices architecture:
+
+- **Frontend**: React components organized into pages, layouts, features
+- **Backend**: Flask app divided into services (recommendation, analysis, user)
+- **AI Adapters**: GPT-3.5 for text parsing, Gemini Vision for image analysis
+- **Data Layer**: MongoDB with collections for recipes, users, feedback, and history
+
+---
+
+## 📦 API Endpoints
+
+| Endpoint                        | Description                                 |
+|---------------------------------|---------------------------------------------|
+| `/api/recommend`               | Main recommendation engine                  |
+| `/api/analyze-food-image`      | Ingredient recognition via image upload     |
+| `/api/extract-recipe-attributes` | Recipe parsing with GPT-3.5               |
+| `/api/user/history`            | Fetch or update search history              |
+| `/api/user/preferences`        | Manage dietary filters and preferences      |
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/nutrimate.git
+cd nutrimate
+
